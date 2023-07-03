@@ -2,16 +2,33 @@
 #include "Square.h"
 #include "Rectangle.h"
 #include "Circle.h"
+#include "Ellipse.h"
 using namespace MyShapes;
 int main()
 {
-    Square sq(5, 7, 10);
-    sq.Show();
-    MyShapes::Rectangle rc(20, 20, 17, 6);
+    FILE* f;
+    fopen_s(&f, "Square.bin", "rb");
+    Square sr(1, 1, 1);
+    sr.Load(f);
+    sr.Show();
+    fclose(f);
+    
+    fopen_s(&f, "Rectangle.bin", "rb");
+    MyShapes::Rectangle rc(1, 1, 1, 1);
+    rc.Load(f);
     rc.Show();
-    Circle cr(40, 5, 5);
+    fclose(f);
+
+    fopen_s(&f, "Circle.bin", "rb");
+    Circle cr(1, 1, 1);
+    cr.Load(f);
     cr.Show();
-    // Вызов функции system("pause > nul") скрывает надпись в консоли
+    fclose(f);
+
+    /*fopen_s(&f, "Ellipse.bin", "rb");
+    MyShapes::Ellipse ell(1, 1, 1, 1);
+    ell.Load(f);
+    ell.Show();
+    fclose(f);*/
     system("pause > nul");
-    system("cls");
 }

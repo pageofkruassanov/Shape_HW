@@ -1,11 +1,12 @@
 #pragma once
 #include "Shape.h"
 namespace MyShapes {
-	class Circle : public Shape
+	class Ellipse : public Shape
 	{
-		int radius;
+		int length;
+		int width;
 	public:
-		Circle(int x, int y, int radius) : Shape{ x, y }, radius{ radius } {};
+		Ellipse(int x, int y, int length, int width) : Shape{ x, y }, length{ length }, width{ width } {};
 		void Show() override;
 		void Save(FILE* f) override;
 		void Load(FILE* f) override;

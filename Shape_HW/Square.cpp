@@ -21,4 +21,12 @@ namespace MyShapes {
 			SetConsoleCursorPosition(hHandle, cursorPos);
 		}
 	}
+	void Square::Save(FILE* f)
+	{
+		fwrite(this, sizeof(Square), 1, f);
+	}
+	void Square::Load(FILE* f)
+	{
+		fread(this, sizeof(Square), 1, f);
+	}
 }

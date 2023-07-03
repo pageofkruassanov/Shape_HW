@@ -12,8 +12,8 @@ namespace MyShapes{
 		Shape() = delete;
 		Shape(int x, int y) : coordX{ x }, coordY{ y } {};
 		virtual void Show() = 0;
-		/*virtual void Save() = 0;
-		virtual void Load() = 0;*/
+		virtual void Save(FILE* f) = 0;
+		virtual void Load(FILE* f) = 0;
 
 	};
 }

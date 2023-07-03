@@ -22,4 +22,12 @@ namespace MyShapes {
 			SetConsoleCursorPosition(hHandle, cursorPos);
 		}
 	}
+	void Rectangle::Save(FILE* f)
+	{
+		fwrite(this, sizeof(Rectangle), 1, f);
+	}
+	void Rectangle::Load(FILE* f)
+	{
+		fread(this, sizeof(Rectangle), 1, f);
+	}
 }
