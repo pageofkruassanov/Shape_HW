@@ -25,10 +25,11 @@ int main()
     cr.Show();
     fclose(f);
 
-    /*fopen_s(&f, "Ellipse.bin", "rb");
+    fopen_s(&f, "Ellipse.bin", "rb");
     MyShapes::Ellipse ell(1, 1, 1, 1);
     ell.Load(f);
     ell.Show();
-    fclose(f);*/
+    fclose(f);
     system("pause > nul");
+    system("cls");
 }
